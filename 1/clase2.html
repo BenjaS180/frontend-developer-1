@@ -43,6 +43,11 @@
             justify-self: center;
             display: none;
         }
+        .logo-email{
+            width: 100px;
+            padding-top: 10px;
+
+        }
         .tittle{
             font-size: var(--lg);
             margin-bottom: 12px;
@@ -56,24 +61,36 @@
             margin-bottom: 32px;
             text-align: center;
         }
-        .form{
-            display: flex;
-            flex-direction: column;
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+            justify-items: center;
         }
-        .label{
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
+        .email-image{
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            background-color: var(--text-input-field);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
 
         }
-        .input{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+        .email-image img{
+            width: 80px;
+        }
+        .resend{
+            font-size: var(--sm);
+
+        }
+        .resend span{
+            color: var(--very-light-pink);
+        }
+        .resend a{
+            color: var(--hospital-green);
+            text-decoration: none;
         }
         .primary-button{
             background-color: var(--hospital-green);
@@ -86,7 +103,7 @@
             font-weight: bold;
             height: 50px;
         }
-        .logitn-button{
+        .login-button{
             margin-top: 14px;
             margin-bottom: 30px;
         }
@@ -103,16 +120,20 @@
             <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
             
 
-            <h1 class="tittle">Create a new password</h1>
-            <p class="subtittle">Enter a new password for you account</p>
-            <form action="/" class="form">
-                <label for="" class="password">Password</label>
-                <input type="password" id="password" placeholder="******" class="input input-password">
+            <h1 class="tittle">Email has been sent!</h1>
+            <p class="subtittle">Please check your inbox for intructions on how to reset the password</p>
 
-                <label for="" class="new-password">Password</label>
-                <input type="password" id="new-password" placeholder="******" class="input input-password">
+            <div class="email-image">
+                <img src="./Platzi_YardSale_Icons/email.svg" alt="email">
+            </div>
+
+            <input type="button" value="Login" class="primary-button login-button">
             
-                <input type="submit"  value="Confirm" class="primary-button login-button">
+            <p class="resend">
+                <span>Dind't receive the email?</span>
+                <a href="/">Resend</a>
+            </p>
+
             </form>
         </div>
     </div>
